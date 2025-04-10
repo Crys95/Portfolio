@@ -70,7 +70,7 @@ export const HeroSection = () => {
           <Image
             width={420}
             height={420}
-            src="/images/crystyan7.jpg"
+            src="/images/crystyan.png"
             alt="foto de perfil"
             className="p-1 border-2 border-indigo-500 w-[300px] h-full lg:w-[420px] mb-6 lg:mb-0 lg:rounded-lg rounded-full object-cover hover:shadow-button hover:border-indigo-200 transition-all"
           />
