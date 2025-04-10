@@ -56,7 +56,7 @@ export const ContactForm = () => {
               <MdEmail />
             </motion.a>
             <motion.a
-              href="doc/CrystyanCurriculo.pdf"
+              href="doc/Crystyan_Curriculo.docx"
               download
               target="_blanck"
               className="text-gray-100 w-12 h-12 hover:h-14 hover:w-14 flex justify-center items-center transition-all rounded-lg border-2 border-indigo-400/50 hover:bg-indigo-400 hover:shadow-button hover:border-2 hover:border-indigo-300"
