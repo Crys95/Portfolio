@@ -44,10 +44,10 @@ export const HeroSection = () => {
               onClick={() => setTipeImagem('/images/crystyan7.jpg')}
               className="cursor-pointer pl-5 text-indigo-400 hover:text-gray-100 bg-indigo-900/80 text-sm py-1 px-3 rounded-lg"
             >
-              proficional
+              profissional
             </motion.span>
             <motion.span
-              onClick={() => setTipeImagem('/images/crystyan2.png')}
+              onClick={() => setTipeImagem('/images/crystyan.png')}
               className="cursor-pointer text-indigo-400 hover:text-gray-100 bg-indigo-900/80 text-sm py-1 px-3 rounded-lg"
             >
               futuro
