@@ -1,7 +1,7 @@
 'use client'
 
 import { TechBadge } from '@/app/components/tech-badge'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import { ParticleComponent } from '@/app/components/particles/Particules'
 import { useState } from 'react'
@@ -55,7 +55,11 @@ export const HeroSection = () => {
           </span>
           <h2 className="text-4xl font-medium mt-2 text-indigo-300">
             <Typewriter
-              words={['Crystyan Gomes de Moura Ferreira']}
+              words={[
+                'Crystyan Gomes',
+                'Desenvolvedor Full Stack',
+                'Apaixonado por tecnologia!',
+              ]}
               loop={true}
               cursor
               cursorStyle="|"
@@ -84,21 +88,26 @@ export const HeroSection = () => {
             ))}
           </div>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 200, scale: 0.5 }}
-          exit={{ opacity: 0, y: 200, scale: 0.5 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="w-full lg:h-[500px] flex items-center justify-center lg:ml-36"
-        >
-          <Image
-            width={420}
-            height={420}
-            src={tipeImagem!}
-            alt="foto de perfil"
-            className="p-1 border-2 border-indigo-500 w-[300px] h-full lg:w-[420px] mb-6 lg:mb-0 lg:rounded-lg rounded-full object-cover hover:shadow-button hover:border-indigo-200 transition-all"
-          />
-        </motion.div>
+        <div className="w-full lg:h-[500px] flex items-center justify-center lg:ml-36">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={tipeImagem}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.4 }}
+              className="w-[300px] lg:w-[420px] h-[400px] lg:h-[550px] flex items-center justify-center"
+            >
+              <Image
+                width={420}
+                height={420}
+                src={tipeImagem}
+                alt="foto de perfil"
+                className="p-1 border-2 border-indigo-500 w-full h-full object-cover mb-6 lg:mb-0 lg:rounded-lg rounded-full hover:shadow-button hover:border-indigo-200 transition-all"
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   )
