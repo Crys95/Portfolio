@@ -4,6 +4,8 @@ import { TechBadge } from '@/app/components/tech-badge'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { ParticleComponent } from '@/app/components/particles/Particules'
+import { useState } from 'react'
+import { Typewriter } from 'react-simple-typewriter'
 
 const Experiencias = [
   { name: 'JavaScript' },
@@ -25,6 +27,7 @@ const Experiencias = [
 ]
 
 export const HeroSection = () => {
+  const [tipeImagem, setTipeImagem] = useState('/images/crystyan7.jpg')
   return (
     <section className="w-full lg:h-full bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
       <ParticleComponent />
@@ -36,9 +39,30 @@ export const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="w-full lg:max-w-[530px]"
         >
-          <p className="font-mono text-indigo-400">Olá, meu nome é</p>
-          <h2 className="text-4xl font-medium mt-2">
-            Crystyan Gomes de Moura Ferreira
+          <span className="font-mono text-indigo-400 flex gap-4">
+            <motion.span
+              onClick={() => setTipeImagem('/images/crystyan7.jpg')}
+              className="cursor-pointer pl-5 text-indigo-400 hover:text-gray-100 bg-indigo-900/80 text-sm py-1 px-3 rounded-lg"
+            >
+              proficional
+            </motion.span>
+            <motion.span
+              onClick={() => setTipeImagem('/images/crystyan2.png')}
+              className="cursor-pointer text-indigo-400 hover:text-gray-100 bg-indigo-900/80 text-sm py-1 px-3 rounded-lg"
+            >
+              futuro
+            </motion.span>
+          </span>
+          <h2 className="text-4xl font-medium mt-2 text-indigo-300">
+            <Typewriter
+              words={['Crystyan Gomes de Moura Ferreira']}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={2000}
+            />
           </h2>
           <p className="text-gray-200 my-6 text-base sm:text-base">
             A constante vontade de melhorar é meu combustível. Vejo cada desafio
@@ -70,7 +94,7 @@ export const HeroSection = () => {
           <Image
             width={420}
             height={420}
-            src="/images/crystyan.png"
+            src={tipeImagem!}
             alt="foto de perfil"
             className="p-1 border-2 border-indigo-500 w-[300px] h-full lg:w-[420px] mb-6 lg:mb-0 lg:rounded-lg rounded-full object-cover hover:shadow-button hover:border-indigo-200 transition-all"
           />
