@@ -1,5 +1,5 @@
 'use client'
-import { BsFiletypePdf } from 'react-icons/bs'
+import { BsFiletypeDocx } from 'react-icons/bs'
 import { SectionTitles } from '../section-title'
 import { TbBrandGithub, TbBrandLinkedin, TbBrandWhatsapp } from 'react-icons/tb'
 import { MdEmail } from 'react-icons/md'
@@ -56,12 +56,11 @@ export const ContactForm = () => {
               <MdEmail />
             </motion.a>
             <motion.a
-              href="doc/Crystyan_Curriculo.docx"
-              download
-              target="_blanck"
+              href="/doc/Crystyan_Gomes_Curriculo.docx"
+              download="Crystyan_Gomes_Curriculo.docx"
               className="text-gray-100 w-12 h-12 hover:h-14 hover:w-14 flex justify-center items-center transition-all rounded-lg border-2 border-indigo-400/50 hover:bg-indigo-400 hover:shadow-button hover:border-2 hover:border-indigo-300"
             >
-              <BsFiletypePdf />
+              <BsFiletypeDocx />
             </motion.a>
           </div>
         </div>
